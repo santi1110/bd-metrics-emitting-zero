@@ -1,10 +1,5 @@
 ### Order Failure Metrics
 
-**Branch name:** metrics-prework
-
-**RDE workfows:**
-* `rde wflow run metrics-prework-emittingzero-orderprocessortest`
-
 Expected time required: 10 min
 
 You have an order processing class that must perform some tasks to complete an order (check stock, process

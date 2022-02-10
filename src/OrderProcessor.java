@@ -1,5 +1,3 @@
-package com.amazon.ata.metrics.prework.emittingzero;
-
 /**
  * Order Processor class.
  */
