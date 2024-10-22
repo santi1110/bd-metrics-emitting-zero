@@ -1,3 +1,5 @@
+import com.amazonaws.services.cloudwatch.model.StandardUnit;
+
 /**
  * Order Processor class.
  */
@@ -35,9 +37,12 @@ public class OrderProcessor {
         try {
             // Other order processing code omitted
             paymentClient.processPayment(newOrder);
+            metricsPublisher.addMetric("ORDER_FAILURES",0, StandardUnit.Count);
 
         } catch (Exception e) {
             System.out.println("Exception thrown while processing order: " + e.getMessage());
+
+            metricsPublisher.addMetric("ORDER_FAILURES", 1, StandardUnit.Count);
         }
     }
 }
